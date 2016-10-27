@@ -40,11 +40,12 @@ namespace MVCMaby.Controllers
                         break;
                 }
                 Console.WriteLine(answer);
-                ViewData["answer"] = answer;
+                ViewData["answer"] = Math.Round(answer, 4);
             }
             ViewData["Number1"] = Number1;
             ViewData["Number2"] = Number2;
             ViewData["Operator"] = Operator;
+            ViewData["Title"] = "Calculator";
             return View();
         }
             

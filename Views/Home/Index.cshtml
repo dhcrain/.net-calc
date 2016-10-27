@@ -1,46 +1,24 @@
 
-<h2>Characters:</h2>
+<h2 class="text-center">.Net Calc</h2>
 
 <form asp-action="Index" asp-controler="Home">
-    <input type="text" name="Number1"/>
-    <!--<select data-toggle="buttons" name="Operator">-->
-        <option type="radio" value="+">+</option>
-        <option type="radio" value="-">-</option>
-        <option type="radio" value="X">X</option>
-        <option type="radio" value="/">/</option>
-    <!--</select>-->
-        <input type="radio" value="+">+</input>
-        <input type="radio" value="-">-</input>
-        <input type="radio" value="X">X</input>
-        <input type="radio" value="/">/</input>
-    <input type="text" name="Number2"/>
-    <input type="submit" value="Do Math" />
+    <div class="text-center">
+    <input type="text" name="Number1" required/><br>
+    <div>
+        <input type="radio" class="operator" name="Operator" value="+">+</input>
+        <input type="radio" class="operator" name="Operator" value="X">X</input>
+        <input type="radio" class="operator" name="Operator" value="/">/</input>
+        <input type="radio" class="operator" name="Operator" value="-">-</input>
+    </div>
+        
+    <input type="text" name="Number2" required/><br>
+    
+            <input class="btn btn-default calc" type="submit" value="Do Math" />
+    </div>
 </form>
 
 @if (@ViewData["answer"] != null)
 {
-    <h3><small>@ViewData["Number1"] @ViewData["Operator"] @ViewData["Number2"] =</small> @ViewData["answer"]</h3>
+    <h3 class="text-center"><small>@ViewData["Number1"] @ViewData["Operator"] @ViewData["Number2"] =</small> @ViewData["answer"]</h3>
 }
-
-
-<br>
-<hr>
-<h3>Calc</h3>
-<form action="">
-
-<label for="id_num1"></label>
-<input id="id_num1" name="num1" step="any" type="number" required />
-
-<div class="fieldWrapper " data-toggle="buttons">        
-    <span class="btn btn-primary operators text-center"><label for="id_operator_1"><input id="id_operator_1" name="operator" type="radio" value="+" required /> +</label></span>
-    <span class="btn btn-primary operators text-center"><label for="id_operator_2"><input id="id_operator_2" name="operator" type="radio" value="-" required /> -</label></span>
-    <span class="btn btn-primary operators text-center"><label for="id_operator_3"><input id="id_operator_3" name="operator" type="radio" value="/" required /> /</label></span>
-    <span class="btn btn-primary operators text-center"><label for="id_operator_4"><input id="id_operator_4" name="operator" type="radio" value="X" required /> X</label></span>
-</div>
-<label for="id_num2"></label>
-<input id="id_num2" name="num2" step="any" type="number" required />
-<br>
-<input class="btn btn-default" type="submit" name="submit" value="Calculate">
-
-</form>
 

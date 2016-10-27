@@ -49,3 +49,9 @@ textarea {
   }
 }
 /* dhcrain custom CSS */
+input.operator {
+    margin: 15px 5px 15px 8px;
+}
+input.calc {
+    margin-top: 15px;
+}
