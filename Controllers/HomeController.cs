@@ -13,14 +13,16 @@ namespace MVCMaby.Controllers
         {
             if (Operator != null)
             {
+                float num_1 = float.Parse(Number1);
+                float num_2 = float.Parse(Number2);
                 double answer;
                 switch (Operator) 
                 {
                     case "+":
-                        answer = float.Parse(Number1) + float.Parse(Number2);
+                        answer = num_1 + num_2;
                         break;
                     case "-":
-                        answer = float.Parse(Number1) - float.Parse(Number2);
+                        answer = num_1 - num_2;
                         break;
                     case "/":
                         if (Number2 == "0")
@@ -29,11 +31,11 @@ namespace MVCMaby.Controllers
                         }
                         else
                         {
-                            answer = float.Parse(Number1) / float.Parse(Number2);
+                            answer = num_1 / num_2;
                         }
                         break;
                     case "X":
-                        answer = float.Parse(Number1) * float.Parse(Number2);
+                        answer = num_1 * num_2;
                         break;
                     default:
                         answer = 0;
