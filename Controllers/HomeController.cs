@@ -48,12 +48,6 @@ namespace MVCMaby.Controllers
             ViewData["Title"] = "Calculator";
             return View();
         }
-            
-        public IActionResult Create(string CharacterName)
-        {
-            Models.Character.Create(CharacterName);
-            return RedirectToAction("Index");
-        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

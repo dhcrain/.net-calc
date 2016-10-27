@@ -5,20 +5,19 @@
     <div class="text-center">
     <input type="text" name="Number1" required/><br>
     <div>
-        <input type="radio" class="operator" name="Operator" value="+">+</input>
+        <input type="radio" class="operator" name="Operator" value="+" checked="checked">+</input>
         <input type="radio" class="operator" name="Operator" value="X">X</input>
         <input type="radio" class="operator" name="Operator" value="/">/</input>
         <input type="radio" class="operator" name="Operator" value="-">-</input>
     </div>
         
     <input type="text" name="Number2" required/><br>
-    
-            <input class="btn btn-default calc" type="submit" value="Do Math" />
+        <input class="btn btn-default calc" type="submit" value="Do Math" />
     </div>
 </form>
 
 @if (@ViewData["answer"] != null)
 {
-    <h3 class="text-center"><small>@ViewData["Number1"] @ViewData["Operator"] @ViewData["Number2"] =</small> @ViewData["answer"]</h3>
+    <h2 class="text-center"><small>@ViewData["Number1"] @ViewData["Operator"] @ViewData["Number2"] =</small> @ViewData["answer"]</h2>
 }
 
